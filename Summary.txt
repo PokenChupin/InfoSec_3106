@@ -1,0 +1,13 @@
+This Project was implemented using the Laravel framework that follows a Model View Controller Achitecture and uses Eloquent for handling the database manipulation. Since the project relied on Laravel Framework, most of the discussed Deadly Sins was addressed like the following:
+
+Thou Shall not use Hidden Input in Authentication Form.
+	- Instead of having a Hidden input pass the ID of a model, Laravel uses the controller to validate the input instead.
+
+
+Thous Shall not hardcode Query.
+	- There is no need for hardcoded Query in the project since and Laravel uses modularization of services which are reliable than hardcoded Query and also Eloquent handles query builder and database manipulation at the back end of the project.
+
+Thou shall not take the context of the query and place it in the local storage.
+	- The Project returns a encrypted version of the context rather than the pure context itself. Another Thing added to the project is a "token" header column in the "user" table that is implemented using the helper function of laravel str_random(16) which makes it unique for every user. This can be used as a unique identifier rather than using the id of the user.
+
+
